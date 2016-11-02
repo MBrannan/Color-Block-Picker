@@ -18,71 +18,38 @@ $(document).ready(function() {
     $('h2').html("<div class=random>Please select " + randomColor + "</div>");
   }
 
-  $('.boxAzure').click(function() {
-    if ("Azure" == randomColor) {
+  function colorDecider (color) {
+    if (color == randomColor) {
       alert("Correct!");
       newRandomColor();
     } else {
       alert("Not quite!")
     }
+  }
+
+  $('.boxAzure').click(function() {
+    colorDecider("Azure");
   });
 
   $('.boxChartreuse').click(function() {
-    if ("Chartreuse" == randomColor) {
-      alert("Correct!")
-      newRandomColor();
-    } else {
-      alert("Not quite!")
-    }
+    colorDecider("Chartreuse");
   });
 
   $('.boxGainsboro').click(function() {
-    if ("Gainsboro" == randomColor) {
-      alert("Correct!")
-      newRandomColor();
-    } else {
-      alert("Not quite!")
-    }
+    colorDecider("Gainsboro");
   });
 
   $('.boxPeru').click(function() {
-    if ("Peru" == randomColor) {
-      alert("Correct!")
-      newRandomColor();
-    } else {
-      alert("Not quite!")
-    }
+    colorDecider("Peru");
   });
 
   $('.boxThistle').click(function() {
-    if ("Thistle" == randomColor) {
-      alert("Correct!")
-      newRandomColor();
-    } else {
-      alert("Not quite!")
-    }
+    colorDecider("Thistle");
   });
-
-
 
 console.log("pls");
 
   function randomNumber(min, max){
     return Math.floor(Math.random() * (1 + max - min) + min);
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });
