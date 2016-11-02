@@ -12,11 +12,16 @@ $(document).ready(function() {
   $('.boxPeru').append("<div class='peru'></div>");
   $('.boxThistle').append("<div class='thistle'></div>");
 
-
+  function newRandomColor () {
+    random = randomNumber(0, colorArray.length - 1);
+    randomColor = colorArray[random];
+    $('h2').html("<div class=random>Please select " + randomColor + "</div>");
+  }
 
   $('.boxAzure').click(function() {
     if ("Azure" == randomColor) {
-      alert("Correct!")
+      alert("Correct!");
+      newRandomColor();
     } else {
       alert("Not quite!")
     }
@@ -25,6 +30,7 @@ $(document).ready(function() {
   $('.boxChartreuse').click(function() {
     if ("Chartreuse" == randomColor) {
       alert("Correct!")
+      newRandomColor();
     } else {
       alert("Not quite!")
     }
@@ -33,6 +39,7 @@ $(document).ready(function() {
   $('.boxGainsboro').click(function() {
     if ("Gainsboro" == randomColor) {
       alert("Correct!")
+      newRandomColor();
     } else {
       alert("Not quite!")
     }
@@ -41,6 +48,7 @@ $(document).ready(function() {
   $('.boxPeru').click(function() {
     if ("Peru" == randomColor) {
       alert("Correct!")
+      newRandomColor();
     } else {
       alert("Not quite!")
     }
@@ -49,10 +57,12 @@ $(document).ready(function() {
   $('.boxThistle').click(function() {
     if ("Thistle" == randomColor) {
       alert("Correct!")
+      newRandomColor();
     } else {
       alert("Not quite!")
     }
   });
+
 
 
 console.log("pls");
